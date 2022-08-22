@@ -11,8 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@nestjs/common": "^8.0.11",
-    "fastify-multer": "^2.0.2",
-    "multer": "^1.4.3"
+    "fastify-multer": "^2.0.2"
   },
   "keywords": [
     "fastify",
@@ -27,5 +26,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/allullc/nest-fastify-multer.git"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "fastify": "^3.27.4",
+    "rxjs": "^7.5.5"
   }
 }

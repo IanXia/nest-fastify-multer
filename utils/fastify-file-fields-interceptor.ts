@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import FastifyMulter from 'fastify-multer';
-import { Options, Multer } from 'multer';
+import { Options } from 'fastify-multer/lib/interfaces';
 import { MulterField } from './interfaces';
 
 type MulterInstance = any;
@@ -24,7 +24,7 @@ function FastifyFileFields(
     constructor(
       @Optional()
       @Inject('MULTER_MODULE_OPTIONS')
-      options: Multer,
+      options: typeof FastifyMulter,
     ) {
       this.multer = (FastifyMulter as any)({ ...options, ...localOptions });
     }
